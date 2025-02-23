@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import {marked} from 'marked';
+import Toolbar from './components/Toolbar/Toolbar';
+import FileOpener from './components/FileOpener/FileOpener';
+import DownloadButton from './components/DownloadButton/DownloadButton';
 import './ZenMark.css';
 
 const ZenMark = () => {
@@ -21,6 +24,10 @@ const ZenMark = () => {
         URL.revokeObjectURL(url);
     };
 
+    const handleFileLoad = (content) => {
+        setMarkdown(content);
+    };
+
     useEffect(() => {
         const handleKeydown = (event) => {
             if (event.ctrlKey && event.key === 's') {
@@ -37,18 +44,26 @@ const ZenMark = () => {
 
     return (
         <>
-        <div className="container">
-            <textarea
-                id="editor"
-                placeholder="Start typing your Markdown here..."
-                onChange={updatePreview}
-                value={markdown}
-            />
-            <div
-                id="preview"
-                dangerouslySetInnerHTML={{ __html: marked.parse(markdown) }}
-            />
-        </div>
+            <Toolbar>
+                <div className="toolbar-left">
+                    <FileOpener onFileLoad={handleFileLoad} />
+                </div>
+                <div className="toolbar-right">
+                    <DownloadButton onSave={saveMarkdown} />
+                </div>
+            </Toolbar>
+            <div className="container">
+                <textarea
+                    id="editor"
+                    placeholder="Start typing your Markdown here..."
+                    onChange={updatePreview}
+                    value={markdown}
+                />
+                <div
+                    id="preview"
+                    dangerouslySetInnerHTML={{ __html: marked.parse(markdown) }}
+                />
+            </div>
         </>
     );
 };

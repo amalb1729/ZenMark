@@ -6,20 +6,18 @@ body {
     margin: 0;
     background-color: #f8f9fa;
     color: #333;
-    
 }
 
-
-#root{
+#root {
     width: 100%;
 }
-
 
 .container {
     display: flex;
-    height: 100vh;
+    height: calc(100vh - 60px);
     width: 100%;
     flex-direction: row;
+    margin-top: 60px;
 }
 
 #editor, #preview {
