@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {marked} from 'marked';
-import Toolbar from './components/Toolbar/Toolbar';
-import FileOpener from './components/FileOpener/FileOpener';
-import DownloadButton from './components/DownloadButton/DownloadButton';
 import './ZenMark.css';
 
-const ZenMark = () => {
-    const [markdown, setMarkdown] = useState('');
-
+const ZenMark = ({ markdown, setParentMarkdown }) => {
     const updatePreview = (event) => {
-        setMarkdown(event.target.value);
+        setParentMarkdown(event.target.value);
     };
 
     const saveMarkdown = () => {
@@ -22,10 +17,6 @@ const ZenMark = () => {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-    };
-
-    const handleFileLoad = (content) => {
-        setMarkdown(content);
     };
 
     useEffect(() => {
@@ -43,28 +34,18 @@ const ZenMark = () => {
     }, [markdown]);
 
     return (
-        <>
-            <div className="container">
-                <textarea
-                    id="editor"
-                    placeholder="Start typing your Markdown here..."
-                    onChange={updatePreview}
-                    value={markdown}
-                />
-                <div
-                    id="preview"
-                    dangerouslySetInnerHTML={{ __html: marked.parse(markdown) }}
-                />
-            </div>
-            <Toolbar>
-                <div className="toolbar-left">
-                    <FileOpener onFileLoad={handleFileLoad} />
-                </div>
-                <div className="toolbar-right">
-                    <DownloadButton onSave={saveMarkdown} />
-                </div>
-            </Toolbar>
-        </>
+        <div className="container">
+            <textarea
+                id="editor"
+                placeholder="Start typing your Markdown here..."
+                onChange={updatePreview}
+                value={markdown}
+            />
+            <div
+                id="preview"
+                dangerouslySetInnerHTML={{ __html: marked.parse(markdown) }}
+            />
+        </div>
     );
 };
 
