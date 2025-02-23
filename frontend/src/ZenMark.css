@@ -1,0 +1,144 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    
+}
+
+
+#root{
+    width: 100%;
+}
+
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: row;
+}
+
+#editor, #preview {
+    width: 50%;
+}
+
+#editor {
+    padding: 30px;
+    border-right: 1px solid #e9ecef;
+    resize: none;
+    outline: none;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    background-color: #fff;
+    border: none;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+    line-height: 1.6;
+    transition: box-shadow 0.3s ease;
+}
+
+#editor:focus {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#preview {
+    padding: 30px;
+    overflow-y: auto;
+    background-color: #fff;
+    line-height: 1.6;
+    border-left: 1px solid #e9ecef;
+}
+
+#preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview h6 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#preview h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+#preview h2 {
+    font-size: 2em;
+}
+
+#preview h3 {
+    font-size: 1.75em;
+}
+
+#preview p {
+    margin-bottom: 20px;
+    color: #495057;
+}
+
+#preview code {
+    background-color: #f1f3f5;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #d6336c;
+}
+
+#preview pre {
+    background-color: #f1f3f5;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+#preview pre code {
+    background-color: transparent;
+    padding: 0;
+    color: inherit;
+}
+
+#preview a {
+    color: #228be6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#preview a:hover {
+    color: #1c7ed6;
+    text-decoration: underline;
+}
+
+#preview blockquote {
+    border-left: 4px solid #e9ecef;
+    padding-left: 15px;
+    color: #6c757d;
+    margin: 0 0 20px 0;
+}
+
+#preview ul, #preview ol {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+#preview li {
+    margin-bottom: 10px;
+}
+
+#preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* Add a subtle animation to the preview area */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#preview {
+    animation: fadeIn 0.5s ease;
+}
