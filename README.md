@@ -1,5 +1,5 @@
 # ZenMark 
-**ZenMark** is a minimalist, offline Markdown note-taking web app designed as an alternative to existing apps like Obsidian and Simplenote. It provides a distraction-free environment for writing and organizing notes using standard Markdown syntax.  
+**ZenMark** is a minimalist, offline Markdown note-taking web app. It provides a distraction-free environment for writing and organizing notes using standard Markdown syntax.  
 
 ### ✨ Features  
 - **Offline First** – No internet or external APIs required.  
