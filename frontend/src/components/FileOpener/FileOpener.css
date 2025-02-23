@@ -1,0 +1,22 @@
+.file-opener {
+    display: inline-block;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-label {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    margin: 0;
+}
+
+.file-label:hover {
+    background-color: #2980b9;
+} 

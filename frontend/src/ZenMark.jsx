@@ -1,12 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {marked} from 'marked';
 import './ZenMark.css';
 
-const ZenMark = () => {
-    const [markdown, setMarkdown] = useState('');
-
+const ZenMark = ({ markdown, setParentMarkdown }) => {
     const updatePreview = (event) => {
-        setMarkdown(event.target.value);
+        setParentMarkdown(event.target.value);
     };
 
     const saveMarkdown = () => {
@@ -36,7 +34,6 @@ const ZenMark = () => {
     }, [markdown]);
 
     return (
-        <>
         <div className="container">
             <textarea
                 id="editor"
@@ -49,7 +46,6 @@ const ZenMark = () => {
                 dangerouslySetInnerHTML={{ __html: marked.parse(markdown) }}
             />
         </div>
-        </>
     );
 };
 
