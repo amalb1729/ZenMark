@@ -10,6 +10,7 @@
 
 This app ensures complete privacy by storing notes locally, making it an ideal choice for users who prefer an offline note-taking solution.  
 
+
 ## 📜 License  
 This project is open-source and available under the **MIT License**.  
 
@@ -91,3 +92,6 @@ ZenMark is an open-source project, and contributions are welcome!
 - **Feature Requests:** Open an issue describing your idea.  
 - **Bug Reports:** If you find a bug, report it with steps to reproduce.  
 - **Pull Requests:** Feel free to contribute and submit PRs!
+
+[🎥 Watch Demo Video](https://drive.google.com/drive/folders/1LwdWMdrdIUUyyhgm0-9IZ_ofFVyTttRz?usp=sharing)
+
