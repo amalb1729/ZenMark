@@ -13,7 +13,7 @@ function Help(){
       <iframe
           src={guide}
           width="54%"
-          height="640px"
+          height="100%"
         ></iframe>
     </div>
 
