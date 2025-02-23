@@ -44,14 +44,6 @@ const ZenMark = () => {
 
     return (
         <>
-            <Toolbar>
-                <div className="toolbar-left">
-                    <FileOpener onFileLoad={handleFileLoad} />
-                </div>
-                <div className="toolbar-right">
-                    <DownloadButton onSave={saveMarkdown} />
-                </div>
-            </Toolbar>
             <div className="container">
                 <textarea
                     id="editor"
@@ -64,6 +56,14 @@ const ZenMark = () => {
                     dangerouslySetInnerHTML={{ __html: marked.parse(markdown) }}
                 />
             </div>
+            <Toolbar>
+                <div className="toolbar-left">
+                    <FileOpener onFileLoad={handleFileLoad} />
+                </div>
+                <div className="toolbar-right">
+                    <DownloadButton onSave={saveMarkdown} />
+                </div>
+            </Toolbar>
         </>
     );
 };
