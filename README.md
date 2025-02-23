@@ -20,3 +20,25 @@ You are free to:
 
 **Disclaimer:**  
 This software is provided "as-is" without any warranties. See the [LICENSE](LICENSE) file for full details.  
+
+## 🚀 Working  
+To run the project locally, follow these steps:  
+
+1. **Install Dependencies:**
+
+   If you don’t have Vite installed, first install it using:
+
+   `npm install`
+
+3. **Clone the Repository:**
+   
+   `git clone https://github.com/amalb1729/ZenMark.git`
+   
+   `cd ZenMark`
+
+4. **Running the web-app:**
+   
+   `cd frontend`
+   
+   `npm run dev`
+
