@@ -10,6 +10,10 @@ body {
 
 #root {
     width: 100%;
+    background-image: url(./assets/background.jpg);
+    margin: 0;
+
+    padding: 0;
 }
 
 .container {
@@ -21,7 +25,7 @@ body {
 }
 
 #editor, #preview {
-    width: 50%;
+    width: 100%;
 }
 
 #editor {
@@ -31,7 +35,7 @@ body {
     outline: none;
     font-family: 'Courier New', monospace;
     font-size: 16px;
-    background-color: #fff;
+    background-color: #e3dbd0;
     border: none;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
     line-height: 1.6;
@@ -45,7 +49,7 @@ body {
 #preview {
     padding: 30px;
     overflow-y: auto;
-    background-color: #fff;
+    background-color: #d3c5bb;
     line-height: 1.6;
     border-left: 1px solid #e9ecef;
 }
