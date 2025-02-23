@@ -1,9 +1,10 @@
+
 function Help(){
 
     return(
 
         <>
-        <div>
+        <div className="help">
             <h1>Help</h1>
         </div>
         </>
