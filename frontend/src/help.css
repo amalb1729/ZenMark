@@ -1,0 +1,15 @@
+.help{
+    height: 100vh;
+}
+
+
+iframe{
+    align-items: center;
+}
+
+.iframe_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

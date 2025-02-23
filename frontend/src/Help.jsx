@@ -1,11 +1,22 @@
+import React, { useState } from 'react';
+import "./help.css"
+import guide from "./assets/cheatsheet.pdf"
+
 
 function Help(){
 
     return(
 
         <>
-        <div className="help">
-            <h1>Help</h1>
+        <div class="help">
+        <div class="iframe_content">
+      <iframe
+          src={guide}
+          width="54%"
+          height="640px"
+        ></iframe>
+    </div>
+
         </div>
         </>
 
